@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"os"
 	"strconv"
-
-	"github.com/cirocosta/go-pidpath/pidpath"
 )
 
 const help = `Usage:
@@ -26,7 +24,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	path, err := pidpath.GetExePathFromPid(pid)
+	path, err := GetExePathFromPid(pid)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "error: failed to parse pid - %v", err)
 		os.Exit(1)

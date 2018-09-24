@@ -1,5 +1,5 @@
 // +build darwin
-package pidpath
+package main
 
 // #include <libproc.h>
 // #include <stdlib.h>

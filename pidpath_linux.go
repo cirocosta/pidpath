@@ -1,5 +1,5 @@
 // +build linux
-package pidpath
+package main
 
 import (
 	"os"
