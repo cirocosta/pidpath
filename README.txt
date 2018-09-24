@@ -11,3 +11,7 @@ Example:
 
 	pidpath 3249
 	/bin/bash
+
+Install:
+
+	go get github.com/cirocosta/pidpath
