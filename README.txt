@@ -15,3 +15,7 @@ Example:
 Install:
 
 	go get github.com/cirocosta/pidpath
+
+Know more:
+
+	https://ops.tips/blog/macos-pid-absolute-path-and-procfs-exploration/#a-golang-binary-that-suits-linux-and-macos
