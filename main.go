@@ -24,7 +24,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	path, err := GetExePathFromPid(pid)
+	path, err := Get(pid)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "error: failed to parse pid - %v", err)
 		os.Exit(1)
