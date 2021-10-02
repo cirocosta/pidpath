@@ -1,4 +1,4 @@
-package main
+package pidpath
 
 // #include <libproc.h>
 // #include <stdlib.h>

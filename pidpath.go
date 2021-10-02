@@ -1,4 +1,5 @@
-package main
+// Package pidpath implements path functions for running processes.
+package pidpath
 
 // Get retrieves the absolute path to the executable of a running
 // process.

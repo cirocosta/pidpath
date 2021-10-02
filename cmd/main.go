@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+
+	"github.com/echocrow/pidpath"
 )
 
 const help = `Usage:
@@ -25,7 +27,7 @@ func main() {
 	}
 	pid := int32(pid64)
 
-	path, err := Get(pid)
+	path, err := pidpath.Get(pid)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "error: failed to parse pid - %v", err)
 		os.Exit(1)
