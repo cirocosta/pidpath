@@ -14,24 +14,25 @@ const help = `Usage:
 
 func main() {
 	if len(os.Args) != 2 {
-		fmt.Fprintln(os.Stderr, help)
-		fmt.Fprintln(os.Stderr, "error: invalid number of arguments")
-		os.Exit(1)
+		fmtFatal("%s\nerror: invalid number of arguments", help)
 	}
 
 	pidStr := os.Args[1]
 	pid64, err := strconv.ParseInt(pidStr, 10, 32)
 	if err != nil {
-		fmt.Fprintln(os.Stderr, "error: failed to parse pid - %v", err)
-		os.Exit(1)
+		fmtFatal("error: failed to parse pid - %v\n", err)
 	}
 	pid := int32(pid64)
 
 	path, err := pidpath.Get(pid)
 	if err != nil {
-		fmt.Fprintln(os.Stderr, "error: failed to parse pid - %v", err)
-		os.Exit(1)
+		fmtFatal("error: failed to parse pid - %v\n", err)
 	}
 
 	fmt.Println(path)
+}
+
+func fmtFatal(format string, a ...interface{}) {
+	fmt.Fprintf(os.Stderr, format, a...)
+	os.Exit(1)
 }
