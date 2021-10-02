@@ -20,5 +20,9 @@ pidpath 3249
 ## Install
 
 ```sh
-go get github.com/cirocosta/pidpath
+go get github.com/echocrow/pidpath
 ```
+
+## Credit
+
+This is a fork of [pidpath by cirocosta](https://github.com/cirocosta/pidpath), updated for go modules.
