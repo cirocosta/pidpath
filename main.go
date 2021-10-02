@@ -18,11 +18,12 @@ func main() {
 	}
 
 	pidStr := os.Args[1]
-	pid, err := strconv.Atoi(pidStr)
+	pid64, err := strconv.ParseInt(pidStr, 10, 32)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "error: failed to parse pid - %v", err)
 		os.Exit(1)
 	}
+	pid := int32(pid64)
 
 	path, err := Get(pid)
 	if err != nil {
