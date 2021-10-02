@@ -1,6 +1,6 @@
 .PHONY: build
 build:
-	@go build
+	@goreleaser --snapshot --skip-publish --rm-dist
 
 .PHONY: fmt
 fmt:
