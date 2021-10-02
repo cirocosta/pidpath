@@ -1,4 +1,3 @@
-// +build linux
 package main
 
 import (
@@ -6,7 +5,7 @@ import (
 	"strconv"
 )
 
-func GetExePathFromPid(pid int) (path string, err error) {
+func getExePathFromPid(pid int) (path string, err error) {
 	path, err = os.Readlink("/proc/" + strconv.Itoa(pid) + "/exe")
 	return
 }
