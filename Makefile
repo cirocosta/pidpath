@@ -1,5 +1,7 @@
+.PHONY: build
 build:
-	go build -i -v
+	@go build
 
+.PHONY: fmt
 fmt:
-	go fmt ./...
+	@go fmt ./...
