@@ -6,6 +6,5 @@ import (
 )
 
 func get(pid int32) (path string, err error) {
-	path, err = os.Readlink("/proc/" + fmt.Sprint(pid) + "/exe")
-	return
+	return os.Readlink("/proc/" + fmt.Sprint(pid) + "/exe")
 }
