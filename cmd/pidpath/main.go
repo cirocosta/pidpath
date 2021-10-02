@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/echocrow/pidpath"
+	"github.com/cirocosta/pidpath"
 )
 
 const help = `Usage:

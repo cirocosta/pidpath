@@ -22,15 +22,11 @@ pidpath 3249
 To compile and install the `pidpath` CLI, run:
 
 ```sh
-go install github.com/echocrow/pidpath/cmd/pidpath@latest
+go install github.com/cirocosta/pidpath/cmd/pidpath@latest
 ```
 
-To add `pidpath` to your Go project, import `github.com/echocrow/pidpath` or run:
+To add `pidpath` to your Go project, import `github.com/cirocosta/pidpath` or run:
 
 ```sh
-go get github.com/echocrow/pidpath
+go get github.com/cirocosta/pidpath
 ```
-
-## Credit
-
-This is a fork of [pidpath by cirocosta](https://github.com/cirocosta/pidpath), updated for go modules.

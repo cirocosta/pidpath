@@ -1,4 +1,4 @@
-module github.com/echocrow/pidpath
+module github.com/cirocosta/pidpath
 
 go 1.17
 

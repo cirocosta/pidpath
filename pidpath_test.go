@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/echocrow/pidpath"
+	"github.com/cirocosta/pidpath"
 )
 
 func TestGet(t *testing.T) {
