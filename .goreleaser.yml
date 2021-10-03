@@ -6,12 +6,12 @@ before:
 
 builds:
   - id: linux-build
-    main: ./cmd
+    main: ./cmd/pidpath
     env: [CGO_ENABLED=0]
     goos: [linux]
     goarch: [amd64]
   - id: darwin-build
-    main: ./cmd
+    main: ./cmd/pidpath
     env: [CGO_ENABLED=1]
     goos: [darwin]
     goarch: [amd64]

@@ -19,6 +19,14 @@ pidpath 3249
 
 ## Install
 
+To compile and install the `pidpath` CLI, run:
+
+```sh
+go install github.com/echocrow/pidpath/cmd/pidpath@latest
+```
+
+To add `pidpath` to your Go project, import `github.com/echocrow/pidpath` or run:
+
 ```sh
 go get github.com/echocrow/pidpath
 ```
