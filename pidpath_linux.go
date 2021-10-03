@@ -1,12 +1,10 @@
-// +build linux
-package main
+package pidpath
 
 import (
+	"fmt"
 	"os"
-	"strconv"
 )
 
-func GetExePathFromPid(pid int) (path string, err error) {
-	path, err = os.Readlink("/proc/" + strconv.Itoa(pid) + "/exe")
-	return
+func get(pid int32) (path string, err error) {
+	return os.Readlink("/proc/" + fmt.Sprint(pid) + "/exe")
 }

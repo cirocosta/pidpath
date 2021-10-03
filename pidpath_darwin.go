@@ -1,5 +1,4 @@
-// +build darwin
-package main
+package pidpath
 
 // #include <libproc.h>
 // #include <stdlib.h>
@@ -13,7 +12,7 @@ import (
 
 const bufSize = C.PROC_PIDPATHINFO_MAXSIZE
 
-func GetExePathFromPid(pid int) (path string, err error) {
+func get(pid int32) (path string, err error) {
 	buf := C.CString(string(make([]byte, bufSize)))
 	defer C.free(unsafe.Pointer(buf))
 

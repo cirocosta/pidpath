@@ -1,0 +1,17 @@
+project_name: pidpath
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: go-build
+    main: ./cmd/pidpath
+    env: [CGO_ENABLED=0]
+    goos: [linux, windows]
+    goarch: [amd64]
+  - id: cgo-build
+    main: ./cmd/pidpath
+    env: [CGO_ENABLED=1]
+    goos: [darwin]
+    goarch: [amd64]
