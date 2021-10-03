@@ -5,12 +5,12 @@ before:
     - go mod tidy
 
 builds:
-  - id: linux-build
+  - id: go-build
     main: ./cmd/pidpath
     env: [CGO_ENABLED=0]
-    goos: [linux]
+    goos: [linux, windows]
     goarch: [amd64]
-  - id: darwin-build
+  - id: cgo-build
     main: ./cmd/pidpath
     env: [CGO_ENABLED=1]
     goos: [darwin]
